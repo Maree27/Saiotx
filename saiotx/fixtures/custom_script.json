@@ -1,0 +1,13 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Custom Script",
+  "dt": "User",
+  "modified": "2021-02-20 14:16:01.975699",
+  "name": "User-Client",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on('User', {\n\trefresh(frm) {\n        if(frappe.session.user !== \"Administrator\"){\n            cur_frm.set_df_property(\"sb_allow_modules\",\"hidden\",1)\n        }\n\t}\n})"
+ }
+]
